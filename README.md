@@ -129,3 +129,4 @@ Day 30: Review and Future Learning
 Review what you’ve learned
 Reflect on your project and areas of improvement
 Plan next steps for advanced topics (e.g., frameworks, libraries like React or Vue)
+https://laracasts.com/series/30-days-to-learn-laravel-11
