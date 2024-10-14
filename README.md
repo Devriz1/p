@@ -130,3 +130,31 @@ Review what you’ve learned
 Reflect on your project and areas of improvement
 Plan next steps for advanced topics (e.g., frameworks, libraries like React or Vue)
 https://laracasts.com/series/30-days-to-learn-laravel-11
+
+
+
+
+
+
+
+document.getElementById('addTaskBtn').addEventListener('click',addTask);
+
+ function addTask(){
+        const taskInput = document.getElementById('taskInput');
+        const taskText = taskInput.value;
+
+        const li = document.createElement('li');
+        li.textContent = taskText;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.addEventListener('click',function() {
+                li.remove();
+            });
+
+            li.appendChild(deleteBtn);
+            document.getElementById('takeList').appendChild(li);
+
+            taskInput.value = '';
+            }
+        
