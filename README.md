@@ -157,4 +157,52 @@ document.getElementById('addTaskBtn').addEventListener('click',addTask);
 
             taskInput.value = '';
             }
-        
+
+
+
+        create table students(
+studentid int,firstName varchar(100),lastName varchar(100),age int);
+insert into students values(1,'shibil','ayoob',21);
+insert into students values(2,'shaheer','kdr',20);
+insert into students values(3,'jasir','sainu',20);
+insert into students values(4,'minhaj','mhd',21);
+insert into students values(5,'anas','zain',21);
+
+create table college(
+collegeid int,name varchar(100),age int,courseName varchar(100));
+insert into college values(1,'shibil',21,'BA');
+insert into college values(2,'shaheer',20,'bca');
+insert into college values(3,'jasir',20,'bcom');
+insert into college values(4,'minhaj',21,'bba');
+insert into college values(5,'anas',21,'accounting');
+
+SELECT 
+    s.studentid, 
+    s.firstName AS studentFirstName, 
+    s.lastName, 
+    s.age AS studentAge,
+    c.collegeid, 
+    c.name AS collegeName, 
+    c.age AS collegeAge, 
+    c.courseName
+FROM 
+    students s
+INNER JOIN 
+    college c
+ON 
+    s.firstName = c.name;
+alter table students
+add column courseName varchar(100);
+SELECT*FROM students;
+update students
+set courseName='bba'
+where studentid=1;
+SELECT*FROM students;
+update students
+set courseName='bcom'
+where studentid=2;
+update students
+set courseName='bca'
+where studentid=3;
+SELECT*FROM students;
+
