@@ -206,3 +206,18 @@ set courseName='bca'
 where studentid=3;
 SELECT*FROM students;
 
+example of nonlocal
+Why is "hello" printed instead of "Jane"?
+x = "Jane" is declared inside myfunc1()
+
+This means x is a local variable inside myfunc1().
+myfunc2() is a nested function inside myfunc1()
+
+myfunc2() does not define its own x, but instead it modifies x from myfunc1() using nonlocal.
+When myfunc2() is called, x = "hello" modifies the original x in myfunc1()
+
+Since nonlocal x is used, Python does not create a new x inside myfunc2() but instead updates the x from myfunc1().
+Finally, myfunc1() returns x, which has been changed to "hello"
+
+So, the output is "hello" instead of "Jane".
+
